@@ -57,7 +57,7 @@ int sumTwoWholeNumbers(int aNumOne, int aNumTwo) {
 }
 
 // Function definition for the largesOfThree function.
-int largestofThreeWholeNumbers(int firstNum, int secNum, int third) {
+int largestOfThreeWholeNumbers(int firstNum, int secNum, int third) {
 
     int largest = 0;
 
