@@ -1,6 +1,7 @@
 // tV 9/4/24
 /*
  *forAndWhileLoop.cpp
+ *
  *This program will demonstrate the repetition control structure
  *using the for and while loops
  *
@@ -8,6 +9,9 @@
 
 #include <iostream>
 using namespace std;
+
+// declare a function named sumARange.
+int sumARange(int, int);
 
 int main() {
     cout << "\n Welcome to my while and For Loop Program!" << endl;
@@ -28,10 +32,10 @@ int main() {
     while (myLoopControlVar <= 10) {
         cout << "\n Hello " << myLoopControlVar << endl;
 
-    // Change the loop control variable.
-    myLoopControlVar++;
+        // Change the loop control variable.
+        myLoopControlVar++;
 
-}
+    }
 
     // Code up the sample while loop from today's video
     // write out all the numbers between 100-500 that are
@@ -55,7 +59,31 @@ int main() {
         cout << "\nin the for loop and i is: " << i << endl;
     }
 
+    // Call my function
+    int theRetValue = 0;
+    int num1 = 3;
+    int num2 = 6;
+    theRetValue = sumARange(num1, num2);
+
+    cout << "\n The sum of the range between " << num1 << " and " << num2 << " is: " << theRetValue << endl;
+
 
 
     return 0;
+}
+
+// define my function named sumARange.
+int sumARange(int startRange, int endRange) {
+    // this function will sum the range of numbers
+    // between startRange and endRange
+
+    // We need an accumulator
+    int theSumOftheRange = 0;
+
+    for (int i = startRange; i <= endRange; i++) {
+        cout << "\n inside sumARange and theSumOfTheRange = " << theSumOftheRange << endl;
+        theSumOftheRange = theSumOftheRange + i;
+        return theSumOftheRange;
+    }
+
 }
